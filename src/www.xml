@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://10.42.0.86:5432/ice</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+      <mapping class="spring.entity.EntityCategoryService"/>
+      <mapping class="spring.entity.EntityCategoryShop"/>
+      <mapping class="spring.entity.EntityPrice"/>
+      <mapping class="spring.entity.EntityProduct"/>
+      <mapping class="spring.entity.EntityDefaultCategory"/>
+      <mapping class="spring.entity.EntityDefaultService"/>
+      <mapping class="spring.entity.EntityDeleteMarker"/>
+    <mapping class="spring.entity.EntityEmployee"/>
+    <mapping class="spring.entity.EntitySchedule"/>
+    <mapping class="spring.entity.EntityAccountUsers"/>
+    <mapping class="spring.entity.EntityOrders"/>
+      <mapping class="spring.entity.EntityTaskList"/>
+
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
